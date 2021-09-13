@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.8"
+arch:
+  - amd64
+  - arm64
+install:
+  - pip install .
+  - pip install pycrypto
+script:
+  - python tests/test-aes.py
+  - python tests/test-blockfeeder.py
+  - python tests/test-util.py
